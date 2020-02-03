@@ -1,0 +1,14 @@
+KeyFrame:
+  -getPointsInBox
+
+MapPoint:
+  -add mObjects
+
+System:
+  -createObjectID
+  -mObjectMap
+  -getImage
+
+Tracking:
+  -saves mIm, mImRight in addition to mImgray
+  -add mutex around mCurrentFrame changes

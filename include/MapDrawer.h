@@ -30,6 +30,7 @@
 
 namespace ORB_SLAM2
 {
+class Map;
 
 class MapDrawer
 {

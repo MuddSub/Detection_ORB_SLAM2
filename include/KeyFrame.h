@@ -28,9 +28,11 @@
 #include "ORBextractor.h"
 #include "Frame.h"
 #include "KeyFrameDatabase.h"
+#include "Detector.h"
 
 #include <mutex>
-
+#include <boost/geometry.hpp>
+#include <boost/geometry/geometries/geometries.hpp>
 
 namespace ORB_SLAM2
 {
@@ -39,6 +41,13 @@ class Map;
 class MapPoint;
 class Frame;
 class KeyFrameDatabase;
+
+class ObjectType;
+
+namespace bg = boost::geometry;
+typedef bg::model::point<double, 2, bg::cs::cartesian> point_t;
+typedef bg::model::polygon<point_t> polygon_t;
+
 
 class KeyFrame
 {
@@ -62,8 +71,8 @@ public:
     void EraseConnection(KeyFrame* pKF);
     void UpdateConnections();
     void UpdateBestCovisibles();
-    std::set<KeyFrame *> GetConnectedKeyFrames();
-    std::vector<KeyFrame* > GetVectorCovisibleKeyFrames();
+    std::set<KeyFrame*> GetConnectedKeyFrames();
+    std::vector<KeyFrame*> GetVectorCovisibleKeyFrames();
     std::vector<KeyFrame*> GetBestCovisibilityKeyFrames(const int &N);
     std::vector<KeyFrame*> GetCovisiblesByWeight(const int &w);
     int GetWeight(KeyFrame* pKF);
@@ -115,6 +124,9 @@ public:
     static bool lId(KeyFrame* pKF1, KeyFrame* pKF2){
         return pKF1->mnId<pKF2->mnId;
     }
+
+    //Allows labeling of points for detection
+    std::vector<MapPoint*> getPointsInBox(polygon_t pBoundingBox);
 
 
     // The following variables are accesed from only 1 thread or never change (no mutex needed).
@@ -222,7 +234,7 @@ protected:
     // Bad flags
     bool mbNotErase;
     bool mbToBeErased;
-    bool mbBad;    
+    bool mbBad;
 
     float mHalfBaseline; // Only for visualization
 

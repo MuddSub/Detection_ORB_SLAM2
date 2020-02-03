@@ -35,16 +35,24 @@
 #include "KeyFrameDatabase.h"
 #include "ORBVocabulary.h"
 #include "Viewer.h"
+#include "Object.h"
+#include "Detector.h"
+
+#include <map>
 
 namespace ORB_SLAM2
 {
 
 class Viewer;
 class FrameDrawer;
+class MapDrawer;
 class Map;
 class Tracking;
 class LocalMapping;
 class LoopClosing;
+class Object;
+
+class Detector;
 
 class System
 {
@@ -57,6 +65,7 @@ public:
     };
 
 public:
+    bool mReady = false;
 
     // Initialize the SLAM system. It launches the Local Mapping, Loop Closing and Viewer threads.
     System(const string &strVocFile, const string &strSettingsFile, const eSensor sensor, const bool bUseViewer = true);
@@ -119,10 +128,15 @@ public:
     // Information from most recent processed frame
     // You can call this right after TrackMonocular (or stereo or RGBD)
     int GetTrackingState();
+
     std::vector<MapPoint*> GetTrackedMapPoints();
     std::vector<cv::KeyPoint> GetTrackedKeyPointsUn();
 
+    void RegisterDetector(Detector*);
+
 private:
+
+    friend class Detector;
 
     // Input sensor
     eSensor mSensor;
@@ -154,11 +168,17 @@ private:
     FrameDrawer* mpFrameDrawer;
     MapDrawer* mpMapDrawer;
 
+
+    //Vector of Detectors
+    std::vector<Detector*> mpDetectors;
+
     // System threads: Local Mapping, Loop Closing, Viewer.
     // The Tracking thread "lives" in the main execution thread that creates the System object.
     std::thread* mptLocalMapping;
     std::thread* mptLoopClosing;
     std::thread* mptViewer;
+
+    std::vector<std::thread*>mptDetectors;
 
     // Reset flag
     std::mutex mMutexReset;
@@ -169,11 +189,16 @@ private:
     bool mbActivateLocalizationMode;
     bool mbDeactivateLocalizationMode;
 
+
     // Tracking state
     int mTrackingState;
     std::vector<MapPoint*> mTrackedMapPoints;
     std::vector<cv::KeyPoint> mTrackedKeyPointsUn;
     std::mutex mMutexState;
+
+    std::map<unsigned int, Object*> mObjectMap;
+
+
 };
 
 }// namespace ORB_SLAM

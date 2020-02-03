@@ -49,9 +49,10 @@ class Map;
 class LocalMapping;
 class LoopClosing;
 class System;
+class Initializer;
 
 class Tracking
-{  
+{
 
 public:
     Tracking(System* pSys, ORBVocabulary* pVoc, FrameDrawer* pFrameDrawer, MapDrawer* pMapDrawer, Map* pMap,
@@ -95,6 +96,9 @@ public:
     // Current Frame
     Frame mCurrentFrame;
     cv::Mat mImGray;
+    cv::Mat mIm;
+    cv::Mat mImRight;
+    std::mutex mImMutex;
 
     // Initialization Variables (Monocular)
     std::vector<int> mvIniLastMatches;
@@ -114,6 +118,11 @@ public:
     bool mbOnlyTracking;
 
     void Reset();
+
+    std::pair<cv::Mat, unsigned int> getCurrentFrame(bool right);
+
+    bool mImageReady = false;
+
 
 protected:
 
@@ -144,6 +153,7 @@ protected:
     bool NeedNewKeyFrame();
     void CreateNewKeyFrame();
 
+
     // In case of performing only localization, this flag is true when there are no matches to
     // points in the map. Still tracking will continue if there are enough matches with temporal points.
     // In that case we are doing visual odometry. The system will try to do relocalization to recover
@@ -169,10 +179,10 @@ protected:
     KeyFrame* mpReferenceKF;
     std::vector<KeyFrame*> mvpLocalKeyFrames;
     std::vector<MapPoint*> mvpLocalMapPoints;
-    
+
     // System
     System* mpSystem;
-    
+
     //Drawers
     Viewer* mpViewer;
     FrameDrawer* mpFrameDrawer;

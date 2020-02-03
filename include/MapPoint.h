@@ -60,7 +60,7 @@ public:
     void SetBadFlag();
     bool isBad();
 
-    void Replace(MapPoint* pMP);    
+    void Replace(MapPoint* pMP);
     MapPoint* GetReplaced();
 
     void IncreaseVisible(int n=1);
@@ -81,6 +81,7 @@ public:
     int PredictScale(const float &currentDist, KeyFrame*pKF);
     int PredictScale(const float &currentDist, Frame* pF);
 
+
 public:
     long unsigned int mnId;
     static long unsigned int nNextId;
@@ -98,6 +99,9 @@ public:
     long unsigned int mnTrackReferenceForFrame;
     long unsigned int mnLastFrameSeen;
 
+    //variables for object detection
+    std::vector<unsigned int> mObjects;
+
     // Variables used by local mapping
     long unsigned int mnBALocalForKF;
     long unsigned int mnFuseCandidateForKF;
@@ -105,14 +109,14 @@ public:
     // Variables used by loop closing
     long unsigned int mnLoopPointForKF;
     long unsigned int mnCorrectedByKF;
-    long unsigned int mnCorrectedReference;    
+    long unsigned int mnCorrectedReference;
     cv::Mat mPosGBA;
     long unsigned int mnBAGlobalForKF;
 
 
     static std::mutex mGlobalMutex;
 
-protected:    
+protected:
 
      // Position in absolute coordinates
      cv::Mat mWorldPos;
