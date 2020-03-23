@@ -1,0 +1,3 @@
+[submodule "src/YOLOv3_SpringEdition"]
+	path = src/YOLOv3_SpringEdition
+	url = https://github.com/shuochen365/YOLOv3_SpringEdition
