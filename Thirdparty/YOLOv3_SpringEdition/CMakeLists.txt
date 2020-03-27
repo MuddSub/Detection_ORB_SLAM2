@@ -154,7 +154,7 @@ if(UNIX)
 			/usr/local/cuda/lib64/libcudnn.so
 			#/usr/lib/aarch64-linux-gnu/libcudnn.so	# for Jetson Tx2
 	)
-	target_include_directories(YOLOv3SE PUBLIC ..)
+	target_include_directories(YOLOv3SE PUBLIC ../../include)
 endif(UNIX)
 if(MSVC)
 	add_definitions(-D_CRT_RAND_S)

@@ -56,7 +56,7 @@ cv::Mat FrameDrawer::DrawFrame()
         if(mState==Tracking::NOT_INITIALIZED)
         {
             vCurrentKeys = mvCurrentKeys;
-            if(mpMap->mSensor == System::MONOCULAR)
+            if(mpMap->mMono)
               vIniKeys = mvIniKeys;
             vMatches = mvIniMatches;
         }
@@ -76,7 +76,7 @@ cv::Mat FrameDrawer::DrawFrame()
         cvtColor(im,im,CV_GRAY2BGR);
 
     //Draw
-    if(state==Tracking::NOT_INITIALIZED && mpMap->mSensor == System::MONOCULAR) //INITIALIZING
+    if(state==Tracking::NOT_INITIALIZED && mpMap->mMono == System::MONOCULAR) //INITIALIZING
     {
         for(unsigned int i=0; i<vMatches.size(); i++)
         {
@@ -180,7 +180,7 @@ void FrameDrawer::Update(Tracking *pTracker)
     {
 
         cerr << "CRASH" << pTracker->mInitialFrame << endl;
-        if(mpMap->mSensor == System::MONOCULAR)
+        if(mpMap->mMono)
           mvIniKeys=pTracker->mInitialFrame->mvKeys;
         mvIniMatches=pTracker->mvIniMatches;
     }
