@@ -35,7 +35,6 @@ class KeyFrame;
 class Map;
 class Frame;
 
-
 class MapPoint
 {
 public:

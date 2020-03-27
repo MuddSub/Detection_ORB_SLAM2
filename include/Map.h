@@ -24,6 +24,7 @@
 #include "MapPoint.h"
 #include "KeyFrame.h"
 #include <set>
+#include "System.h"
 
 #include <mutex>
 
@@ -38,7 +39,7 @@ class KeyFrame;
 class Map
 {
 public:
-    Map();
+    Map(bool mono);
 
     void AddKeyFrame(KeyFrame* pKF);
     void AddMapPoint(MapPoint* pMP);
@@ -66,6 +67,8 @@ public:
     // This avoid that two points are created simultaneously in separate threads (id conflict)
     std::mutex mMutexPointCreation;
 
+    bool mMono;
+
 protected:
     std::set<MapPoint*> mspMapPoints;
     std::set<KeyFrame*> mspKeyFrames;
@@ -78,6 +81,7 @@ protected:
     int mnBigChangeIdx;
 
     std::mutex mMutexMap;
+
 };
 
 } //namespace ORB_SLAM

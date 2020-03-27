@@ -28,50 +28,34 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include<opencv2/core/core.hpp>
-
+#include <unordered_map>
 #include<System.h>
+//#include "DummyDetector.h"
 
 using namespace std;
+using ORB_SLAM2::Detection;
 
 void LoadImages(const string &strPathLeft, const string &strPathRight, const string &strPathTimes,
-                vector<string> &vstrImageLeft, vector<string> &vstrImageRight, vector<double> &vTimeStamps);
+        const string& strPathLabels,
+        vector<string> &vstrImageLeft, vector<string> &vstrImageRight, vector<double> &vTimeStamps,
+        unordered_map<string, Detection> &vDetections,
+        int rows, int cols);
 
 int main(int argc, char **argv)
 {
-    if(argc != 6)
+    if(argc != 7)
     {
-        cerr << endl << "Usage: ./stereo_euroc path_to_vocabulary path_to_settings path_to_left_folder path_to_right_folder path_to_times_file" << endl;
+        cerr << endl << "Usage: ./stereo_euroc path_to_vocabulary path_to_settings path_to_left_folder path_to_right_folder path_to_times_file path_to_detections_file" << endl;
         return 1;
     }
 
-    // Retrieve paths to images
-    vector<string> vstrImageLeft;
-    vector<string> vstrImageRight;
-    vector<double> vTimeStamp;
-
-    LoadImages(string(argv[3]), string(argv[4]), string(argv[5]), vstrImageLeft, vstrImageRight, vTimeStamp);
-
-    cout << "1" << endl;
-
-    if(vstrImageLeft.empty() || vstrImageRight.empty())
-    {
-        cerr << "ERROR: No images in provided path." << endl;
-        return 1;
-    }
-
-    if(vstrImageLeft.size()!=vstrImageRight.size())
-    {
-        cerr << "ERROR: Different number of left and right images." << endl;
-        return 1;
-    }
-
-    // Read rectification parameters
-    cv::FileStorage fsSettings(argv[2], cv::FileStorage::READ);
-    if(!fsSettings.isOpened())
-    {
-        cerr << "ERROR: Wrong path to settings" << endl;
-        return -1;
-    }
+  // Read rectification parameters
+  cv::FileStorage fsSettings(argv[2], cv::FileStorage::READ);
+  if(!fsSettings.isOpened())
+  {
+    cerr << "ERROR: Wrong path to settings" << endl;
+    return -1;
+  }
 
     cv::Mat K_l, K_r, P_l, P_r, R_l, R_r, D_l, D_r;
     fsSettings["LEFT.K"] >> K_l;
@@ -91,6 +75,31 @@ int main(int argc, char **argv)
     int rows_r = fsSettings["RIGHT.height"];
     int cols_r = fsSettings["RIGHT.width"];
 
+    // Retrieve paths to images
+    vector<string> vstrImageLeft;
+    vector<string> vstrImageRight;
+    vector<double> vTimeStamp;
+    unordered_map<string, Detection> vDetection;
+
+    LoadImages(string(argv[3]), string(argv[4]), string(argv[5]), string(argv[6]),
+               vstrImageLeft, vstrImageRight, vTimeStamp, vDetection, rows_l, cols_l);
+
+    cout << "1" << endl;
+
+    if(vstrImageLeft.empty() || vstrImageRight.empty())
+    {
+        cerr << "ERROR: No images in provided path." << endl;
+        return 1;
+    }
+
+    if(vstrImageLeft.size()!=vstrImageRight.size())
+    {
+        cerr << "ERROR: Different number of left and right images." << endl;
+        return 1;
+    }
+
+
+
     if(K_l.empty() || K_r.empty() || P_l.empty() || P_r.empty() || R_l.empty() || R_r.empty() || D_l.empty() || D_r.empty() ||
             rows_l==0 || rows_r==0 || cols_l==0 || cols_r==0)
     {
@@ -107,6 +116,9 @@ int main(int argc, char **argv)
 
     // Create SLAM system. It initializes all system threads and gets ready to process frames.
     ORB_SLAM2::System SLAM(argv[1],argv[2],ORB_SLAM2::System::STEREO,true);
+
+    while(!SLAM.mReady)
+      usleep(2000);
 
     // Vector for tracking time statistics
     vector<float> vTimesTrack;
@@ -194,14 +206,42 @@ int main(int argc, char **argv)
     return 0;
 }
 
+bool parseFile(string file, int rows, int cols, Detection& d){
+  std::fstream f;
+  f.open(file);
+  std::string active;
+  if(!(f >> active)){
+    return false;
+    f.close();
+  }
+  f >> active;
+  try {
+    d.xMin_ = stof(active) * cols;
+    f >> active;
+    d.xMax_ = stof(active)*cols + d.xMin_;
+    f >> active;
+    d.yMin_ = stof(active) * rows;
+    f >> active;
+    d.yMax_ = stof(active) * rows+ d.yMin_;
+  } catch(int e){
+    cerr << "No detections under " << file << endl;
+  }
+  f.close();
+  return true;
+}
+
 void LoadImages(const string &strPathLeft, const string &strPathRight, const string &strPathTimes,
-                vector<string> &vstrImageLeft, vector<string> &vstrImageRight, vector<double> &vTimeStamps)
+                const string& strPathLabels,
+                vector<string> &vstrImageLeft, vector<string> &vstrImageRight, vector<double> &vTimeStamps,
+                unordered_map<string, Detection> &vDetections,
+                int rows, int cols)
 {
     ifstream fTimes;
     fTimes.open(strPathTimes.c_str());
     vTimeStamps.reserve(5000);
     vstrImageLeft.reserve(5000);
     vstrImageRight.reserve(5000);
+    string active = "0";
     int i = 0;
     while(!fTimes.eof())
     {
@@ -215,9 +255,16 @@ void LoadImages(const string &strPathLeft, const string &strPathRight, const str
             vstrImageLeft.push_back(strPathLeft + "/" + ss.str() + ".png");
             vstrImageRight.push_back(strPathRight + "/" + ss.str() + ".png");
             double t;
+
+            //brute-forcey detector setup
+            string detectionPath = strPathLabels + "/" + "YOLO_darknet" + ss.str() + ".txt";
+            Detection d;
+            if(parseFile(detectionPath, rows, cols, d)){
+              vDetections.insert({ss.str(), d});
+              cout << d << endl;
+            }
             ss >> t;
             vTimeStamps.push_back(t/1e9);
-
         }
     }
 }

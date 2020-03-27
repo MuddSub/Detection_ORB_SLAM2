@@ -64,4 +64,5 @@ void Object::addPoints(std::set<MapPoint*> points){
     mapPoints_.insert(p);
   }
 }
+
 }

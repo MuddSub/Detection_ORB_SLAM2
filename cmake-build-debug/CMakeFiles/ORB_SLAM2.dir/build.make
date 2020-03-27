@@ -57,9 +57,22 @@ include CMakeFiles/ORB_SLAM2.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/ORB_SLAM2.dir/flags.make
 
+CMakeFiles/ORB_SLAM2.dir/src/Frame.cpp.o: CMakeFiles/ORB_SLAM2.dir/flags.make
+CMakeFiles/ORB_SLAM2.dir/src/Frame.cpp.o: ../src/Frame.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/Frame.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM2.dir/src/Frame.cpp.o -c /home/sethgi/muddsub_ws/src/ORB_SLAM2/src/Frame.cpp
+
+CMakeFiles/ORB_SLAM2.dir/src/Frame.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ORB_SLAM2.dir/src/Frame.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sethgi/muddsub_ws/src/ORB_SLAM2/src/Frame.cpp > CMakeFiles/ORB_SLAM2.dir/src/Frame.cpp.i
+
+CMakeFiles/ORB_SLAM2.dir/src/Frame.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ORB_SLAM2.dir/src/Frame.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sethgi/muddsub_ws/src/ORB_SLAM2/src/Frame.cpp -o CMakeFiles/ORB_SLAM2.dir/src/Frame.cpp.s
+
 CMakeFiles/ORB_SLAM2.dir/src/System.cpp.o: CMakeFiles/ORB_SLAM2.dir/flags.make
 CMakeFiles/ORB_SLAM2.dir/src/System.cpp.o: ../src/System.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/System.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/System.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM2.dir/src/System.cpp.o -c /home/sethgi/muddsub_ws/src/ORB_SLAM2/src/System.cpp
 
 CMakeFiles/ORB_SLAM2.dir/src/System.cpp.i: cmake_force
@@ -72,7 +85,7 @@ CMakeFiles/ORB_SLAM2.dir/src/System.cpp.s: cmake_force
 
 CMakeFiles/ORB_SLAM2.dir/src/Tracking.cpp.o: CMakeFiles/ORB_SLAM2.dir/flags.make
 CMakeFiles/ORB_SLAM2.dir/src/Tracking.cpp.o: ../src/Tracking.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/Tracking.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/Tracking.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM2.dir/src/Tracking.cpp.o -c /home/sethgi/muddsub_ws/src/ORB_SLAM2/src/Tracking.cpp
 
 CMakeFiles/ORB_SLAM2.dir/src/Tracking.cpp.i: cmake_force
@@ -85,7 +98,7 @@ CMakeFiles/ORB_SLAM2.dir/src/Tracking.cpp.s: cmake_force
 
 CMakeFiles/ORB_SLAM2.dir/src/LocalMapping.cpp.o: CMakeFiles/ORB_SLAM2.dir/flags.make
 CMakeFiles/ORB_SLAM2.dir/src/LocalMapping.cpp.o: ../src/LocalMapping.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/LocalMapping.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/LocalMapping.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM2.dir/src/LocalMapping.cpp.o -c /home/sethgi/muddsub_ws/src/ORB_SLAM2/src/LocalMapping.cpp
 
 CMakeFiles/ORB_SLAM2.dir/src/LocalMapping.cpp.i: cmake_force
@@ -98,7 +111,7 @@ CMakeFiles/ORB_SLAM2.dir/src/LocalMapping.cpp.s: cmake_force
 
 CMakeFiles/ORB_SLAM2.dir/src/LoopClosing.cpp.o: CMakeFiles/ORB_SLAM2.dir/flags.make
 CMakeFiles/ORB_SLAM2.dir/src/LoopClosing.cpp.o: ../src/LoopClosing.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/LoopClosing.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/LoopClosing.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM2.dir/src/LoopClosing.cpp.o -c /home/sethgi/muddsub_ws/src/ORB_SLAM2/src/LoopClosing.cpp
 
 CMakeFiles/ORB_SLAM2.dir/src/LoopClosing.cpp.i: cmake_force
@@ -111,7 +124,7 @@ CMakeFiles/ORB_SLAM2.dir/src/LoopClosing.cpp.s: cmake_force
 
 CMakeFiles/ORB_SLAM2.dir/src/ORBextractor.cpp.o: CMakeFiles/ORB_SLAM2.dir/flags.make
 CMakeFiles/ORB_SLAM2.dir/src/ORBextractor.cpp.o: ../src/ORBextractor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/ORBextractor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/ORBextractor.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM2.dir/src/ORBextractor.cpp.o -c /home/sethgi/muddsub_ws/src/ORB_SLAM2/src/ORBextractor.cpp
 
 CMakeFiles/ORB_SLAM2.dir/src/ORBextractor.cpp.i: cmake_force
@@ -124,7 +137,7 @@ CMakeFiles/ORB_SLAM2.dir/src/ORBextractor.cpp.s: cmake_force
 
 CMakeFiles/ORB_SLAM2.dir/src/ORBmatcher.cpp.o: CMakeFiles/ORB_SLAM2.dir/flags.make
 CMakeFiles/ORB_SLAM2.dir/src/ORBmatcher.cpp.o: ../src/ORBmatcher.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/ORBmatcher.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/ORBmatcher.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM2.dir/src/ORBmatcher.cpp.o -c /home/sethgi/muddsub_ws/src/ORB_SLAM2/src/ORBmatcher.cpp
 
 CMakeFiles/ORB_SLAM2.dir/src/ORBmatcher.cpp.i: cmake_force
@@ -137,7 +150,7 @@ CMakeFiles/ORB_SLAM2.dir/src/ORBmatcher.cpp.s: cmake_force
 
 CMakeFiles/ORB_SLAM2.dir/src/FrameDrawer.cpp.o: CMakeFiles/ORB_SLAM2.dir/flags.make
 CMakeFiles/ORB_SLAM2.dir/src/FrameDrawer.cpp.o: ../src/FrameDrawer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/FrameDrawer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/FrameDrawer.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM2.dir/src/FrameDrawer.cpp.o -c /home/sethgi/muddsub_ws/src/ORB_SLAM2/src/FrameDrawer.cpp
 
 CMakeFiles/ORB_SLAM2.dir/src/FrameDrawer.cpp.i: cmake_force
@@ -150,7 +163,7 @@ CMakeFiles/ORB_SLAM2.dir/src/FrameDrawer.cpp.s: cmake_force
 
 CMakeFiles/ORB_SLAM2.dir/src/Converter.cpp.o: CMakeFiles/ORB_SLAM2.dir/flags.make
 CMakeFiles/ORB_SLAM2.dir/src/Converter.cpp.o: ../src/Converter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/Converter.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/Converter.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM2.dir/src/Converter.cpp.o -c /home/sethgi/muddsub_ws/src/ORB_SLAM2/src/Converter.cpp
 
 CMakeFiles/ORB_SLAM2.dir/src/Converter.cpp.i: cmake_force
@@ -163,7 +176,7 @@ CMakeFiles/ORB_SLAM2.dir/src/Converter.cpp.s: cmake_force
 
 CMakeFiles/ORB_SLAM2.dir/src/MapPoint.cpp.o: CMakeFiles/ORB_SLAM2.dir/flags.make
 CMakeFiles/ORB_SLAM2.dir/src/MapPoint.cpp.o: ../src/MapPoint.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/MapPoint.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/MapPoint.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM2.dir/src/MapPoint.cpp.o -c /home/sethgi/muddsub_ws/src/ORB_SLAM2/src/MapPoint.cpp
 
 CMakeFiles/ORB_SLAM2.dir/src/MapPoint.cpp.i: cmake_force
@@ -176,7 +189,7 @@ CMakeFiles/ORB_SLAM2.dir/src/MapPoint.cpp.s: cmake_force
 
 CMakeFiles/ORB_SLAM2.dir/src/KeyFrame.cpp.o: CMakeFiles/ORB_SLAM2.dir/flags.make
 CMakeFiles/ORB_SLAM2.dir/src/KeyFrame.cpp.o: ../src/KeyFrame.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/KeyFrame.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/KeyFrame.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM2.dir/src/KeyFrame.cpp.o -c /home/sethgi/muddsub_ws/src/ORB_SLAM2/src/KeyFrame.cpp
 
 CMakeFiles/ORB_SLAM2.dir/src/KeyFrame.cpp.i: cmake_force
@@ -189,7 +202,7 @@ CMakeFiles/ORB_SLAM2.dir/src/KeyFrame.cpp.s: cmake_force
 
 CMakeFiles/ORB_SLAM2.dir/src/Map.cpp.o: CMakeFiles/ORB_SLAM2.dir/flags.make
 CMakeFiles/ORB_SLAM2.dir/src/Map.cpp.o: ../src/Map.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/Map.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/Map.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM2.dir/src/Map.cpp.o -c /home/sethgi/muddsub_ws/src/ORB_SLAM2/src/Map.cpp
 
 CMakeFiles/ORB_SLAM2.dir/src/Map.cpp.i: cmake_force
@@ -202,7 +215,7 @@ CMakeFiles/ORB_SLAM2.dir/src/Map.cpp.s: cmake_force
 
 CMakeFiles/ORB_SLAM2.dir/src/MapDrawer.cpp.o: CMakeFiles/ORB_SLAM2.dir/flags.make
 CMakeFiles/ORB_SLAM2.dir/src/MapDrawer.cpp.o: ../src/MapDrawer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/MapDrawer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/MapDrawer.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM2.dir/src/MapDrawer.cpp.o -c /home/sethgi/muddsub_ws/src/ORB_SLAM2/src/MapDrawer.cpp
 
 CMakeFiles/ORB_SLAM2.dir/src/MapDrawer.cpp.i: cmake_force
@@ -215,7 +228,7 @@ CMakeFiles/ORB_SLAM2.dir/src/MapDrawer.cpp.s: cmake_force
 
 CMakeFiles/ORB_SLAM2.dir/src/Optimizer.cpp.o: CMakeFiles/ORB_SLAM2.dir/flags.make
 CMakeFiles/ORB_SLAM2.dir/src/Optimizer.cpp.o: ../src/Optimizer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/Optimizer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/Optimizer.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM2.dir/src/Optimizer.cpp.o -c /home/sethgi/muddsub_ws/src/ORB_SLAM2/src/Optimizer.cpp
 
 CMakeFiles/ORB_SLAM2.dir/src/Optimizer.cpp.i: cmake_force
@@ -228,7 +241,7 @@ CMakeFiles/ORB_SLAM2.dir/src/Optimizer.cpp.s: cmake_force
 
 CMakeFiles/ORB_SLAM2.dir/src/PnPsolver.cpp.o: CMakeFiles/ORB_SLAM2.dir/flags.make
 CMakeFiles/ORB_SLAM2.dir/src/PnPsolver.cpp.o: ../src/PnPsolver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/PnPsolver.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/PnPsolver.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM2.dir/src/PnPsolver.cpp.o -c /home/sethgi/muddsub_ws/src/ORB_SLAM2/src/PnPsolver.cpp
 
 CMakeFiles/ORB_SLAM2.dir/src/PnPsolver.cpp.i: cmake_force
@@ -238,19 +251,6 @@ CMakeFiles/ORB_SLAM2.dir/src/PnPsolver.cpp.i: cmake_force
 CMakeFiles/ORB_SLAM2.dir/src/PnPsolver.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ORB_SLAM2.dir/src/PnPsolver.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sethgi/muddsub_ws/src/ORB_SLAM2/src/PnPsolver.cpp -o CMakeFiles/ORB_SLAM2.dir/src/PnPsolver.cpp.s
-
-CMakeFiles/ORB_SLAM2.dir/src/Frame.cpp.o: CMakeFiles/ORB_SLAM2.dir/flags.make
-CMakeFiles/ORB_SLAM2.dir/src/Frame.cpp.o: ../src/Frame.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/Frame.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM2.dir/src/Frame.cpp.o -c /home/sethgi/muddsub_ws/src/ORB_SLAM2/src/Frame.cpp
-
-CMakeFiles/ORB_SLAM2.dir/src/Frame.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ORB_SLAM2.dir/src/Frame.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sethgi/muddsub_ws/src/ORB_SLAM2/src/Frame.cpp > CMakeFiles/ORB_SLAM2.dir/src/Frame.cpp.i
-
-CMakeFiles/ORB_SLAM2.dir/src/Frame.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ORB_SLAM2.dir/src/Frame.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sethgi/muddsub_ws/src/ORB_SLAM2/src/Frame.cpp -o CMakeFiles/ORB_SLAM2.dir/src/Frame.cpp.s
 
 CMakeFiles/ORB_SLAM2.dir/src/KeyFrameDatabase.cpp.o: CMakeFiles/ORB_SLAM2.dir/flags.make
 CMakeFiles/ORB_SLAM2.dir/src/KeyFrameDatabase.cpp.o: ../src/KeyFrameDatabase.cpp
@@ -330,8 +330,35 @@ CMakeFiles/ORB_SLAM2.dir/src/Object.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ORB_SLAM2.dir/src/Object.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sethgi/muddsub_ws/src/ORB_SLAM2/src/Object.cpp -o CMakeFiles/ORB_SLAM2.dir/src/Object.cpp.s
 
+CMakeFiles/ORB_SLAM2.dir/src/YOLODetector.cpp.o: CMakeFiles/ORB_SLAM2.dir/flags.make
+CMakeFiles/ORB_SLAM2.dir/src/YOLODetector.cpp.o: ../src/YOLODetector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/YOLODetector.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM2.dir/src/YOLODetector.cpp.o -c /home/sethgi/muddsub_ws/src/ORB_SLAM2/src/YOLODetector.cpp
+
+CMakeFiles/ORB_SLAM2.dir/src/YOLODetector.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ORB_SLAM2.dir/src/YOLODetector.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sethgi/muddsub_ws/src/ORB_SLAM2/src/YOLODetector.cpp > CMakeFiles/ORB_SLAM2.dir/src/YOLODetector.cpp.i
+
+CMakeFiles/ORB_SLAM2.dir/src/YOLODetector.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ORB_SLAM2.dir/src/YOLODetector.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sethgi/muddsub_ws/src/ORB_SLAM2/src/YOLODetector.cpp -o CMakeFiles/ORB_SLAM2.dir/src/YOLODetector.cpp.s
+
+CMakeFiles/ORB_SLAM2.dir/src/Detection.cpp.o: CMakeFiles/ORB_SLAM2.dir/flags.make
+CMakeFiles/ORB_SLAM2.dir/src/Detection.cpp.o: ../src/Detection.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/Detection.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM2.dir/src/Detection.cpp.o -c /home/sethgi/muddsub_ws/src/ORB_SLAM2/src/Detection.cpp
+
+CMakeFiles/ORB_SLAM2.dir/src/Detection.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ORB_SLAM2.dir/src/Detection.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sethgi/muddsub_ws/src/ORB_SLAM2/src/Detection.cpp > CMakeFiles/ORB_SLAM2.dir/src/Detection.cpp.i
+
+CMakeFiles/ORB_SLAM2.dir/src/Detection.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ORB_SLAM2.dir/src/Detection.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sethgi/muddsub_ws/src/ORB_SLAM2/src/Detection.cpp -o CMakeFiles/ORB_SLAM2.dir/src/Detection.cpp.s
+
 # Object files for target ORB_SLAM2
 ORB_SLAM2_OBJECTS = \
+"CMakeFiles/ORB_SLAM2.dir/src/Frame.cpp.o" \
 "CMakeFiles/ORB_SLAM2.dir/src/System.cpp.o" \
 "CMakeFiles/ORB_SLAM2.dir/src/Tracking.cpp.o" \
 "CMakeFiles/ORB_SLAM2.dir/src/LocalMapping.cpp.o" \
@@ -346,17 +373,19 @@ ORB_SLAM2_OBJECTS = \
 "CMakeFiles/ORB_SLAM2.dir/src/MapDrawer.cpp.o" \
 "CMakeFiles/ORB_SLAM2.dir/src/Optimizer.cpp.o" \
 "CMakeFiles/ORB_SLAM2.dir/src/PnPsolver.cpp.o" \
-"CMakeFiles/ORB_SLAM2.dir/src/Frame.cpp.o" \
 "CMakeFiles/ORB_SLAM2.dir/src/KeyFrameDatabase.cpp.o" \
 "CMakeFiles/ORB_SLAM2.dir/src/Sim3Solver.cpp.o" \
 "CMakeFiles/ORB_SLAM2.dir/src/Initializer.cpp.o" \
 "CMakeFiles/ORB_SLAM2.dir/src/Viewer.cpp.o" \
 "CMakeFiles/ORB_SLAM2.dir/src/Detector.cpp.o" \
-"CMakeFiles/ORB_SLAM2.dir/src/Object.cpp.o"
+"CMakeFiles/ORB_SLAM2.dir/src/Object.cpp.o" \
+"CMakeFiles/ORB_SLAM2.dir/src/YOLODetector.cpp.o" \
+"CMakeFiles/ORB_SLAM2.dir/src/Detection.cpp.o"
 
 # External object files for target ORB_SLAM2
 ORB_SLAM2_EXTERNAL_OBJECTS =
 
+../lib/libORB_SLAM2.so: CMakeFiles/ORB_SLAM2.dir/src/Frame.cpp.o
 ../lib/libORB_SLAM2.so: CMakeFiles/ORB_SLAM2.dir/src/System.cpp.o
 ../lib/libORB_SLAM2.so: CMakeFiles/ORB_SLAM2.dir/src/Tracking.cpp.o
 ../lib/libORB_SLAM2.so: CMakeFiles/ORB_SLAM2.dir/src/LocalMapping.cpp.o
@@ -371,13 +400,14 @@ ORB_SLAM2_EXTERNAL_OBJECTS =
 ../lib/libORB_SLAM2.so: CMakeFiles/ORB_SLAM2.dir/src/MapDrawer.cpp.o
 ../lib/libORB_SLAM2.so: CMakeFiles/ORB_SLAM2.dir/src/Optimizer.cpp.o
 ../lib/libORB_SLAM2.so: CMakeFiles/ORB_SLAM2.dir/src/PnPsolver.cpp.o
-../lib/libORB_SLAM2.so: CMakeFiles/ORB_SLAM2.dir/src/Frame.cpp.o
 ../lib/libORB_SLAM2.so: CMakeFiles/ORB_SLAM2.dir/src/KeyFrameDatabase.cpp.o
 ../lib/libORB_SLAM2.so: CMakeFiles/ORB_SLAM2.dir/src/Sim3Solver.cpp.o
 ../lib/libORB_SLAM2.so: CMakeFiles/ORB_SLAM2.dir/src/Initializer.cpp.o
 ../lib/libORB_SLAM2.so: CMakeFiles/ORB_SLAM2.dir/src/Viewer.cpp.o
 ../lib/libORB_SLAM2.so: CMakeFiles/ORB_SLAM2.dir/src/Detector.cpp.o
 ../lib/libORB_SLAM2.so: CMakeFiles/ORB_SLAM2.dir/src/Object.cpp.o
+../lib/libORB_SLAM2.so: CMakeFiles/ORB_SLAM2.dir/src/YOLODetector.cpp.o
+../lib/libORB_SLAM2.so: CMakeFiles/ORB_SLAM2.dir/src/Detection.cpp.o
 ../lib/libORB_SLAM2.so: CMakeFiles/ORB_SLAM2.dir/build.make
 ../lib/libORB_SLAM2.so: /opt/opencv3/lib/libopencv_stitching.so.3.4.5
 ../lib/libORB_SLAM2.so: /opt/opencv3/lib/libopencv_superres.so.3.4.5
@@ -454,7 +484,7 @@ ORB_SLAM2_EXTERNAL_OBJECTS =
 ../lib/libORB_SLAM2.so: /usr/lib/libzstd.so
 ../lib/libORB_SLAM2.so: /usr/lib/liblz4.so
 ../lib/libORB_SLAM2.so: CMakeFiles/ORB_SLAM2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Linking CXX shared library ../lib/libORB_SLAM2.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Linking CXX shared library ../lib/libORB_SLAM2.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ORB_SLAM2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -37,6 +37,64 @@
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="stereo_euroc_detection">
+				<Option output="/home/sethgi/muddsub_ws/src/ORB_SLAM2/Examples/Monocular/stereo_euroc_detection" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/sethgi/muddsub_ws/src/ORB_SLAM2/Examples/Monocular"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCOMPILEDWITHC11"/>
+					<Add directory="/home/sethgi/muddsub_ws/src/ORB_SLAM2"/>
+					<Add directory="/home/sethgi/muddsub_ws/src/ORB_SLAM2/include"/>
+					<Add directory="/usr/lib64/cmake/Pangolin/../../../include"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/opt/opencv3/include"/>
+					<Add directory="/opt/opencv3/include/opencv"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../include/c++/9.1.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../include/c++/9.1.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../include/c++/9.1.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/Makefile&quot;  VERBOSE=1 stereo_euroc_detection"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="stereo_euroc_detection/fast">
+				<Option output="/home/sethgi/muddsub_ws/src/ORB_SLAM2/Examples/Monocular/stereo_euroc_detection" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/sethgi/muddsub_ws/src/ORB_SLAM2/Examples/Monocular"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCOMPILEDWITHC11"/>
+					<Add directory="/home/sethgi/muddsub_ws/src/ORB_SLAM2"/>
+					<Add directory="/home/sethgi/muddsub_ws/src/ORB_SLAM2/include"/>
+					<Add directory="/usr/lib64/cmake/Pangolin/../../../include"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/opt/opencv3/include"/>
+					<Add directory="/opt/opencv3/include/opencv"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../include/c++/9.1.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../include/c++/9.1.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../include/c++/9.1.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/Makefile&quot;  VERBOSE=1 stereo_euroc_detection/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="mono_euroc">
 				<Option output="/home/sethgi/muddsub_ws/src/ORB_SLAM2/Examples/Monocular/mono_euroc" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/sethgi/muddsub_ws/src/ORB_SLAM2/Examples/Monocular"/>
@@ -90,122 +148,6 @@
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j12 -f &quot;/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/Makefile&quot;  VERBOSE=1 mono_euroc/fast"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="mono_kitti">
-				<Option output="/home/sethgi/muddsub_ws/src/ORB_SLAM2/Examples/Monocular/mono_kitti" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/sethgi/muddsub_ws/src/ORB_SLAM2/Examples/Monocular"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DCOMPILEDWITHC11"/>
-					<Add directory="/home/sethgi/muddsub_ws/src/ORB_SLAM2"/>
-					<Add directory="/home/sethgi/muddsub_ws/src/ORB_SLAM2/include"/>
-					<Add directory="/usr/lib64/cmake/Pangolin/../../../include"/>
-					<Add directory="/usr/include/eigen3"/>
-					<Add directory="/opt/opencv3/include"/>
-					<Add directory="/opt/opencv3/include/opencv"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../include/c++/9.1.0"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../include/c++/9.1.0/x86_64-pc-linux-gnu"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../include/c++/9.1.0/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/include-fixed"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/Makefile&quot;  VERBOSE=1 mono_kitti"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="mono_kitti/fast">
-				<Option output="/home/sethgi/muddsub_ws/src/ORB_SLAM2/Examples/Monocular/mono_kitti" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/sethgi/muddsub_ws/src/ORB_SLAM2/Examples/Monocular"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DCOMPILEDWITHC11"/>
-					<Add directory="/home/sethgi/muddsub_ws/src/ORB_SLAM2"/>
-					<Add directory="/home/sethgi/muddsub_ws/src/ORB_SLAM2/include"/>
-					<Add directory="/usr/lib64/cmake/Pangolin/../../../include"/>
-					<Add directory="/usr/include/eigen3"/>
-					<Add directory="/opt/opencv3/include"/>
-					<Add directory="/opt/opencv3/include/opencv"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../include/c++/9.1.0"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../include/c++/9.1.0/x86_64-pc-linux-gnu"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../include/c++/9.1.0/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/include-fixed"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/Makefile&quot;  VERBOSE=1 mono_kitti/fast"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="mono_tum">
-				<Option output="/home/sethgi/muddsub_ws/src/ORB_SLAM2/Examples/Monocular/mono_tum" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/sethgi/muddsub_ws/src/ORB_SLAM2/Examples/Monocular"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DCOMPILEDWITHC11"/>
-					<Add directory="/home/sethgi/muddsub_ws/src/ORB_SLAM2"/>
-					<Add directory="/home/sethgi/muddsub_ws/src/ORB_SLAM2/include"/>
-					<Add directory="/usr/lib64/cmake/Pangolin/../../../include"/>
-					<Add directory="/usr/include/eigen3"/>
-					<Add directory="/opt/opencv3/include"/>
-					<Add directory="/opt/opencv3/include/opencv"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../include/c++/9.1.0"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../include/c++/9.1.0/x86_64-pc-linux-gnu"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../include/c++/9.1.0/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/include-fixed"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/Makefile&quot;  VERBOSE=1 mono_tum"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="mono_tum/fast">
-				<Option output="/home/sethgi/muddsub_ws/src/ORB_SLAM2/Examples/Monocular/mono_tum" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/sethgi/muddsub_ws/src/ORB_SLAM2/Examples/Monocular"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DCOMPILEDWITHC11"/>
-					<Add directory="/home/sethgi/muddsub_ws/src/ORB_SLAM2"/>
-					<Add directory="/home/sethgi/muddsub_ws/src/ORB_SLAM2/include"/>
-					<Add directory="/usr/lib64/cmake/Pangolin/../../../include"/>
-					<Add directory="/usr/include/eigen3"/>
-					<Add directory="/opt/opencv3/include"/>
-					<Add directory="/opt/opencv3/include/opencv"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../include/c++/9.1.0"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../include/c++/9.1.0/x86_64-pc-linux-gnu"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../include/c++/9.1.0/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/include-fixed"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/Makefile&quot;  VERBOSE=1 mono_tum/fast"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -443,8 +385,8 @@
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="stereo_kitti_detection">
-				<Option output="/home/sethgi/muddsub_ws/src/ORB_SLAM2/Examples/Stereo/stereo_kitti_detection" prefix_auto="0" extension_auto="0"/>
+			<Target title="mono_kitti">
+				<Option output="/home/sethgi/muddsub_ws/src/ORB_SLAM2/Examples/Monocular/mono_kitti" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/sethgi/muddsub_ws/src/ORB_SLAM2/Examples/Monocular"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -466,14 +408,14 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/Makefile&quot;  VERBOSE=1 stereo_kitti_detection"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/Makefile&quot;  VERBOSE=1 mono_kitti"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="stereo_kitti_detection/fast">
-				<Option output="/home/sethgi/muddsub_ws/src/ORB_SLAM2/Examples/Stereo/stereo_kitti_detection" prefix_auto="0" extension_auto="0"/>
+			<Target title="mono_kitti/fast">
+				<Option output="/home/sethgi/muddsub_ws/src/ORB_SLAM2/Examples/Monocular/mono_kitti" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/sethgi/muddsub_ws/src/ORB_SLAM2/Examples/Monocular"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -495,7 +437,65 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/Makefile&quot;  VERBOSE=1 stereo_kitti_detection/fast"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/Makefile&quot;  VERBOSE=1 mono_kitti/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mono_tum">
+				<Option output="/home/sethgi/muddsub_ws/src/ORB_SLAM2/Examples/Monocular/mono_tum" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/sethgi/muddsub_ws/src/ORB_SLAM2/Examples/Monocular"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCOMPILEDWITHC11"/>
+					<Add directory="/home/sethgi/muddsub_ws/src/ORB_SLAM2"/>
+					<Add directory="/home/sethgi/muddsub_ws/src/ORB_SLAM2/include"/>
+					<Add directory="/usr/lib64/cmake/Pangolin/../../../include"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/opt/opencv3/include"/>
+					<Add directory="/opt/opencv3/include/opencv"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../include/c++/9.1.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../include/c++/9.1.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../include/c++/9.1.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/Makefile&quot;  VERBOSE=1 mono_tum"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mono_tum/fast">
+				<Option output="/home/sethgi/muddsub_ws/src/ORB_SLAM2/Examples/Monocular/mono_tum" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/sethgi/muddsub_ws/src/ORB_SLAM2/Examples/Monocular"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCOMPILEDWITHC11"/>
+					<Add directory="/home/sethgi/muddsub_ws/src/ORB_SLAM2"/>
+					<Add directory="/home/sethgi/muddsub_ws/src/ORB_SLAM2/include"/>
+					<Add directory="/usr/lib64/cmake/Pangolin/../../../include"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/opt/opencv3/include"/>
+					<Add directory="/opt/opencv3/include/opencv"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../include/c++/9.1.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../include/c++/9.1.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../include/c++/9.1.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/Makefile&quot;  VERBOSE=1 mono_tum/fast"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -517,13 +517,16 @@
 		<Unit filename="/home/sethgi/muddsub_ws/src/ORB_SLAM2/Examples/Stereo/stereo_euroc.cpp">
 			<Option target="stereo_euroc"/>
 		</Unit>
+		<Unit filename="/home/sethgi/muddsub_ws/src/ORB_SLAM2/Examples/Stereo/stereo_euroc_detection.cpp">
+			<Option target="stereo_euroc_detection"/>
+		</Unit>
 		<Unit filename="/home/sethgi/muddsub_ws/src/ORB_SLAM2/Examples/Stereo/stereo_kitti.cpp">
 			<Option target="stereo_kitti"/>
 		</Unit>
-		<Unit filename="/home/sethgi/muddsub_ws/src/ORB_SLAM2/Examples/Stereo/stereo_kitti_detection.cpp">
-			<Option target="stereo_kitti_detection"/>
-		</Unit>
 		<Unit filename="/home/sethgi/muddsub_ws/src/ORB_SLAM2/src/Converter.cpp">
+			<Option target="ORB_SLAM2"/>
+		</Unit>
+		<Unit filename="/home/sethgi/muddsub_ws/src/ORB_SLAM2/src/Detection.cpp">
 			<Option target="ORB_SLAM2"/>
 		</Unit>
 		<Unit filename="/home/sethgi/muddsub_ws/src/ORB_SLAM2/src/Detector.cpp">
@@ -584,6 +587,9 @@
 			<Option target="ORB_SLAM2"/>
 		</Unit>
 		<Unit filename="/home/sethgi/muddsub_ws/src/ORB_SLAM2/src/Viewer.cpp">
+			<Option target="ORB_SLAM2"/>
+		</Unit>
+		<Unit filename="/home/sethgi/muddsub_ws/src/ORB_SLAM2/src/YOLODetector.cpp">
 			<Option target="ORB_SLAM2"/>
 		</Unit>
 		<Unit filename="/home/sethgi/muddsub_ws/src/ORB_SLAM2/CMakeLists.txt">

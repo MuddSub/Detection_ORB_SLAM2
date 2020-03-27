@@ -19,10 +19,6 @@ chrono
 -
 unistd.h
 -
-stdio.h
--
-stdlib.h
--
 opencv2/core/core.hpp
 -
 Detector.h

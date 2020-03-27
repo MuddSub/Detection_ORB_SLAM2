@@ -3,6 +3,8 @@
 
 CMakeFiles/ORB_SLAM2.dir/src/Converter.cpp.o: ../src/Converter.cpp
 
+CMakeFiles/ORB_SLAM2.dir/src/Detection.cpp.o: ../src/Detection.cpp
+
 CMakeFiles/ORB_SLAM2.dir/src/Detector.cpp.o: ../src/Detector.cpp
 
 CMakeFiles/ORB_SLAM2.dir/src/Frame.cpp.o: ../src/Frame.cpp
@@ -4744,4 +4746,6 @@ CMakeFiles/ORB_SLAM2.dir/src/Viewer.cpp.o: /usr/include/sys/select.h
 CMakeFiles/ORB_SLAM2.dir/src/Viewer.cpp.o: /usr/include/sys/types.h
 CMakeFiles/ORB_SLAM2.dir/src/Viewer.cpp.o: /usr/include/time.h
 CMakeFiles/ORB_SLAM2.dir/src/Viewer.cpp.o: /usr/include/unistd.h
+
+CMakeFiles/ORB_SLAM2.dir/src/YOLODetector.cpp.o: ../src/YOLODetector.cpp
 

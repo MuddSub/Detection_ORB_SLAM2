@@ -25,7 +25,7 @@
 namespace ORB_SLAM2
 {
 
-Map::Map():mnMaxKFid(0),mnBigChangeIdx(0)
+Map::Map(bool mono):mMono(mono), mnMaxKFid(0),mnBigChangeIdx(0)
 {
 }
 

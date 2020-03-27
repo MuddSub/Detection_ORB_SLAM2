@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "../lib/libORB_SLAM2.pdb"
   "../lib/libORB_SLAM2.so"
   "CMakeFiles/ORB_SLAM2.dir/src/Converter.cpp.o"
+  "CMakeFiles/ORB_SLAM2.dir/src/Detection.cpp.o"
   "CMakeFiles/ORB_SLAM2.dir/src/Detector.cpp.o"
   "CMakeFiles/ORB_SLAM2.dir/src/Frame.cpp.o"
   "CMakeFiles/ORB_SLAM2.dir/src/FrameDrawer.cpp.o"
@@ -22,6 +23,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ORB_SLAM2.dir/src/System.cpp.o"
   "CMakeFiles/ORB_SLAM2.dir/src/Tracking.cpp.o"
   "CMakeFiles/ORB_SLAM2.dir/src/Viewer.cpp.o"
+  "CMakeFiles/ORB_SLAM2.dir/src/YOLODetector.cpp.o"
 )
 
 # Per-language clean rules from dependency scanning.

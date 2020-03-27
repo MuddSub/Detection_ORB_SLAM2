@@ -31,8 +31,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.15/Modules/CMakeLanguageInformation.cmake"
   "/usr/share/cmake-3.15/Modules/CMakeSystemSpecificInformation.cmake"
   "/usr/share/cmake-3.15/Modules/CMakeSystemSpecificInitialize.cmake"
-  "/usr/share/cmake-3.15/Modules/CheckCXXCompilerFlag.cmake"
-  "/usr/share/cmake-3.15/Modules/CheckCXXSourceCompiles.cmake"
   "/usr/share/cmake-3.15/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
   "/usr/share/cmake-3.15/Modules/Compiler/GNU-C.cmake"
   "/usr/share/cmake-3.15/Modules/Compiler/GNU-CXX.cmake"
@@ -61,12 +59,12 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/stereo_euroc_detection.dir/DependInfo.cmake"
   "CMakeFiles/mono_euroc.dir/DependInfo.cmake"
-  "CMakeFiles/mono_kitti.dir/DependInfo.cmake"
-  "CMakeFiles/mono_tum.dir/DependInfo.cmake"
   "CMakeFiles/rgbd_tum.dir/DependInfo.cmake"
   "CMakeFiles/ORB_SLAM2.dir/DependInfo.cmake"
   "CMakeFiles/stereo_kitti.dir/DependInfo.cmake"
   "CMakeFiles/stereo_euroc.dir/DependInfo.cmake"
-  "CMakeFiles/stereo_kitti_detection.dir/DependInfo.cmake"
+  "CMakeFiles/mono_kitti.dir/DependInfo.cmake"
+  "CMakeFiles/mono_tum.dir/DependInfo.cmake"
   )

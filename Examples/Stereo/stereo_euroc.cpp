@@ -33,22 +33,31 @@
 
 using namespace std;
 
+
+
+
 void LoadImages(const string &strPathLeft, const string &strPathRight, const string &strPathTimes,
                 vector<string> &vstrImageLeft, vector<string> &vstrImageRight, vector<double> &vTimeStamps);
 
 int main(int argc, char **argv)
 {
+
+    cout << 0 << endl;
     if(argc != 6)
     {
         cerr << endl << "Usage: ./stereo_euroc path_to_vocabulary path_to_settings path_to_left_folder path_to_right_folder path_to_times_file" << endl;
         return 1;
     }
-
+    cout << 0 << endl;
     // Retrieve paths to images
     vector<string> vstrImageLeft;
     vector<string> vstrImageRight;
     vector<double> vTimeStamp;
+
+    cout << 1 << endl;
     LoadImages(string(argv[3]), string(argv[4]), string(argv[5]), vstrImageLeft, vstrImageRight, vTimeStamp);
+
+    cout << 2 << endl;
 
     if(vstrImageLeft.empty() || vstrImageRight.empty())
     {
@@ -61,7 +70,7 @@ int main(int argc, char **argv)
         cerr << "ERROR: Different number of left and right images." << endl;
         return 1;
     }
-
+    cout << 3 << endl;
     // Read rectification parameters
     cv::FileStorage fsSettings(argv[2], cv::FileStorage::READ);
     if(!fsSettings.isOpened())
@@ -101,10 +110,10 @@ int main(int argc, char **argv)
 
 
     const int nImages = vstrImageLeft.size();
-
+    cout << 4 << endl;
     // Create SLAM system. It initializes all system threads and gets ready to process frames.
     ORB_SLAM2::System SLAM(argv[1],argv[2],ORB_SLAM2::System::STEREO,true);
-
+    cout << 5 << endl;
     // Vector for tracking time statistics
     vector<float> vTimesTrack;
     vTimesTrack.resize(nImages);
@@ -199,8 +208,10 @@ void LoadImages(const string &strPathLeft, const string &strPathRight, const str
     vTimeStamps.reserve(5000);
     vstrImageLeft.reserve(5000);
     vstrImageRight.reserve(5000);
+    int i = 0;
     while(!fTimes.eof())
     {
+        ++i;
         string s;
         getline(fTimes,s);
         if(!s.empty())

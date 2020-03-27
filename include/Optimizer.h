@@ -4,7 +4,7 @@
 * Copyright (C) 2014-2016 Raúl Mur-Artal <raulmur at unizar dot es> (University of Zaragoza)
 * For more information see <https://github.com/raulmur/ORB_SLAM2>
 *
-* ORB-SLAM2 is free software: you can redistribute it and/or modify
+* ORB-SLAM2 is free software: you can    redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
 * the Free Software Foundation, either version 3 of the License, or
 * (at your option) any later version.
@@ -31,7 +31,6 @@
 
 namespace ORB_SLAM2
 {
-
 class LoopClosing;
 
 class Optimizer

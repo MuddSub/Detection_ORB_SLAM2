@@ -59,6 +59,7 @@
 #include <opencv2/features2d/features2d.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 #include <vector>
+#include <iostream>
 
 #include "ORBextractor.h"
 
@@ -810,6 +811,8 @@ void ORBextractor::ComputeKeyPointsOctTree(vector<vector<KeyPoint> >& allKeypoin
 //                //TODO: citation for https://github.com/kafendt/ORB_SLAM2_Accessible/blob/master/src/ORBextractor.cc
 //                //was copypastad from above
                 bool overlap = false;
+
+
                 for(std::vector<int>& region : mExcludedRegions)
                 {
                     // If one rectangle is on left side of other

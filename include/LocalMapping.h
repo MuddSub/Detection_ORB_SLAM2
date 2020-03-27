@@ -33,95 +33,96 @@
 namespace ORB_SLAM2
 {
 
-class Tracking;
-class LoopClosing;
-class Map;
+  class Tracking;
+  class LoopClosing;
+  class Map;
 
-class LocalMapping
-{
-public:
-    LocalMapping(Map* pMap, const float bMonocular);
 
-    void SetLoopCloser(LoopClosing* pLoopCloser);
+  class LocalMapping
+  {
+  public:
+      LocalMapping(Map* pMap, const float bMonocular);
 
-    void SetTracker(Tracking* pTracker);
+      void SetLoopCloser(LoopClosing* pLoopCloser);
 
-    // Main function
-    void Run();
+      void SetTracker(Tracking* pTracker);
 
-    void InsertKeyFrame(KeyFrame* pKF);
+      // Main function
+      void Run();
 
-    // Thread Synch
-    void RequestStop();
-    void RequestReset();
-    bool Stop();
-    void Release();
-    bool isStopped();
-    bool stopRequested();
-    bool AcceptKeyFrames();
-    void SetAcceptKeyFrames(bool flag);
-    bool SetNotStop(bool flag);
+      void InsertKeyFrame(KeyFrame* pKF);
 
-    void InterruptBA();
+      // Thread Synch
+      void RequestStop();
+      void RequestReset();
+      bool Stop();
+      void Release();
+      bool isStopped();
+      bool stopRequested();
+      bool AcceptKeyFrames();
+      void SetAcceptKeyFrames(bool flag);
+      bool SetNotStop(bool flag);
 
-    void RequestFinish();
-    bool isFinished();
+      void InterruptBA();
 
-    int KeyframesInQueue(){
-        unique_lock<std::mutex> lock(mMutexNewKFs);
-        return mlNewKeyFrames.size();
-    }
+      void RequestFinish();
+      bool isFinished();
 
-protected:
+      int KeyframesInQueue(){
+          unique_lock<std::mutex> lock(mMutexNewKFs);
+          return mlNewKeyFrames.size();
+      }
 
-    bool CheckNewKeyFrames();
-    void ProcessNewKeyFrame();
-    void CreateNewMapPoints();
+  protected:
 
-    void MapPointCulling();
-    void SearchInNeighbors();
+      bool CheckNewKeyFrames();
+      void ProcessNewKeyFrame();
+      void CreateNewMapPoints();
 
-    void KeyFrameCulling();
+      void MapPointCulling();
+      void SearchInNeighbors();
 
-    cv::Mat ComputeF12(KeyFrame* &pKF1, KeyFrame* &pKF2);
+      void KeyFrameCulling();
 
-    cv::Mat SkewSymmetricMatrix(const cv::Mat &v);
+      cv::Mat ComputeF12(KeyFrame* &pKF1, KeyFrame* &pKF2);
 
-    bool mbMonocular;
+      cv::Mat SkewSymmetricMatrix(const cv::Mat &v);
 
-    void ResetIfRequested();
-    bool mbResetRequested;
-    std::mutex mMutexReset;
+      bool mbMonocular;
 
-    bool CheckFinish();
-    void SetFinish();
-    bool mbFinishRequested;
-    bool mbFinished;
-    std::mutex mMutexFinish;
+      void ResetIfRequested();
+      bool mbResetRequested;
+      std::mutex mMutexReset;
 
-    Map* mpMap;
+      bool CheckFinish();
+      void SetFinish();
+      bool mbFinishRequested;
+      bool mbFinished;
+      std::mutex mMutexFinish;
 
-    LoopClosing* mpLoopCloser;
-    Tracking* mpTracker;
+      Map* mpMap;
 
-    std::list<KeyFrame*> mlNewKeyFrames;
+      LoopClosing* mpLoopCloser;
+      Tracking* mpTracker;
 
-    KeyFrame* mpCurrentKeyFrame;
+      std::list<KeyFrame*> mlNewKeyFrames;
 
-    std::list<MapPoint*> mlpRecentAddedMapPoints;
+      KeyFrame* mpCurrentKeyFrame;
 
-    std::mutex mMutexNewKFs;
+      std::list<MapPoint*> mlpRecentAddedMapPoints;
 
-    bool mbAbortBA;
+      std::mutex mMutexNewKFs;
 
-    bool mbStopped;
-    bool mbStopRequested;
-    bool mbNotStop;
-    std::mutex mMutexStop;
+      bool mbAbortBA;
 
-    bool mbAcceptKeyFrames;
-    std::mutex mMutexAccept;
-};
+      bool mbStopped;
+      bool mbStopRequested;
+      bool mbNotStop;
+      std::mutex mMutexStop;
+
+      bool mbAcceptKeyFrames;
+      std::mutex mMutexAccept;
+  };
 
 } //namespace ORB_SLAM
 

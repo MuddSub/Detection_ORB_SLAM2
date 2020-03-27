@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/sethgi/muddsub_ws/src/ORB_SLAM2/src/Converter.cpp" "/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/CMakeFiles/ORB_SLAM2.dir/src/Converter.cpp.o"
+  "/home/sethgi/muddsub_ws/src/ORB_SLAM2/src/Detection.cpp" "/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/CMakeFiles/ORB_SLAM2.dir/src/Detection.cpp.o"
   "/home/sethgi/muddsub_ws/src/ORB_SLAM2/src/Detector.cpp" "/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/CMakeFiles/ORB_SLAM2.dir/src/Detector.cpp.o"
   "/home/sethgi/muddsub_ws/src/ORB_SLAM2/src/Frame.cpp" "/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/CMakeFiles/ORB_SLAM2.dir/src/Frame.cpp.o"
   "/home/sethgi/muddsub_ws/src/ORB_SLAM2/src/FrameDrawer.cpp" "/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/CMakeFiles/ORB_SLAM2.dir/src/FrameDrawer.cpp.o"
@@ -25,6 +26,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/sethgi/muddsub_ws/src/ORB_SLAM2/src/System.cpp" "/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/CMakeFiles/ORB_SLAM2.dir/src/System.cpp.o"
   "/home/sethgi/muddsub_ws/src/ORB_SLAM2/src/Tracking.cpp" "/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/CMakeFiles/ORB_SLAM2.dir/src/Tracking.cpp.o"
   "/home/sethgi/muddsub_ws/src/ORB_SLAM2/src/Viewer.cpp" "/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/CMakeFiles/ORB_SLAM2.dir/src/Viewer.cpp.o"
+  "/home/sethgi/muddsub_ws/src/ORB_SLAM2/src/YOLODetector.cpp" "/home/sethgi/muddsub_ws/src/ORB_SLAM2/cmake-build-debug/CMakeFiles/ORB_SLAM2.dir/src/YOLODetector.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

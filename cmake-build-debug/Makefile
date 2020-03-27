@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named stereo_euroc_detection
+
+# Build rule for target.
+stereo_euroc_detection: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 stereo_euroc_detection
+.PHONY : stereo_euroc_detection
+
+# fast build rule for target.
+stereo_euroc_detection/fast:
+	$(MAKE) -f CMakeFiles/stereo_euroc_detection.dir/build.make CMakeFiles/stereo_euroc_detection.dir/build
+.PHONY : stereo_euroc_detection/fast
+
+#=============================================================================
 # Target rules for targets named mono_euroc
 
 # Build rule for target.
@@ -122,32 +135,6 @@ mono_euroc: cmake_check_build_system
 mono_euroc/fast:
 	$(MAKE) -f CMakeFiles/mono_euroc.dir/build.make CMakeFiles/mono_euroc.dir/build
 .PHONY : mono_euroc/fast
-
-#=============================================================================
-# Target rules for targets named mono_kitti
-
-# Build rule for target.
-mono_kitti: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 mono_kitti
-.PHONY : mono_kitti
-
-# fast build rule for target.
-mono_kitti/fast:
-	$(MAKE) -f CMakeFiles/mono_kitti.dir/build.make CMakeFiles/mono_kitti.dir/build
-.PHONY : mono_kitti/fast
-
-#=============================================================================
-# Target rules for targets named mono_tum
-
-# Build rule for target.
-mono_tum: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 mono_tum
-.PHONY : mono_tum
-
-# fast build rule for target.
-mono_tum/fast:
-	$(MAKE) -f CMakeFiles/mono_tum.dir/build.make CMakeFiles/mono_tum.dir/build
-.PHONY : mono_tum/fast
 
 #=============================================================================
 # Target rules for targets named rgbd_tum
@@ -202,17 +189,30 @@ stereo_euroc/fast:
 .PHONY : stereo_euroc/fast
 
 #=============================================================================
-# Target rules for targets named stereo_kitti_detection
+# Target rules for targets named mono_kitti
 
 # Build rule for target.
-stereo_kitti_detection: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 stereo_kitti_detection
-.PHONY : stereo_kitti_detection
+mono_kitti: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mono_kitti
+.PHONY : mono_kitti
 
 # fast build rule for target.
-stereo_kitti_detection/fast:
-	$(MAKE) -f CMakeFiles/stereo_kitti_detection.dir/build.make CMakeFiles/stereo_kitti_detection.dir/build
-.PHONY : stereo_kitti_detection/fast
+mono_kitti/fast:
+	$(MAKE) -f CMakeFiles/mono_kitti.dir/build.make CMakeFiles/mono_kitti.dir/build
+.PHONY : mono_kitti/fast
+
+#=============================================================================
+# Target rules for targets named mono_tum
+
+# Build rule for target.
+mono_tum: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mono_tum
+.PHONY : mono_tum
+
+# fast build rule for target.
+mono_tum/fast:
+	$(MAKE) -f CMakeFiles/mono_tum.dir/build.make CMakeFiles/mono_tum.dir/build
+.PHONY : mono_tum/fast
 
 Examples/Monocular/mono_euroc.o: Examples/Monocular/mono_euroc.cpp.o
 
@@ -349,6 +349,33 @@ Examples/Stereo/stereo_euroc.cpp.s:
 	$(MAKE) -f CMakeFiles/stereo_euroc.dir/build.make CMakeFiles/stereo_euroc.dir/Examples/Stereo/stereo_euroc.cpp.s
 .PHONY : Examples/Stereo/stereo_euroc.cpp.s
 
+Examples/Stereo/stereo_euroc_detection.o: Examples/Stereo/stereo_euroc_detection.cpp.o
+
+.PHONY : Examples/Stereo/stereo_euroc_detection.o
+
+# target to build an object file
+Examples/Stereo/stereo_euroc_detection.cpp.o:
+	$(MAKE) -f CMakeFiles/stereo_euroc_detection.dir/build.make CMakeFiles/stereo_euroc_detection.dir/Examples/Stereo/stereo_euroc_detection.cpp.o
+.PHONY : Examples/Stereo/stereo_euroc_detection.cpp.o
+
+Examples/Stereo/stereo_euroc_detection.i: Examples/Stereo/stereo_euroc_detection.cpp.i
+
+.PHONY : Examples/Stereo/stereo_euroc_detection.i
+
+# target to preprocess a source file
+Examples/Stereo/stereo_euroc_detection.cpp.i:
+	$(MAKE) -f CMakeFiles/stereo_euroc_detection.dir/build.make CMakeFiles/stereo_euroc_detection.dir/Examples/Stereo/stereo_euroc_detection.cpp.i
+.PHONY : Examples/Stereo/stereo_euroc_detection.cpp.i
+
+Examples/Stereo/stereo_euroc_detection.s: Examples/Stereo/stereo_euroc_detection.cpp.s
+
+.PHONY : Examples/Stereo/stereo_euroc_detection.s
+
+# target to generate assembly for a file
+Examples/Stereo/stereo_euroc_detection.cpp.s:
+	$(MAKE) -f CMakeFiles/stereo_euroc_detection.dir/build.make CMakeFiles/stereo_euroc_detection.dir/Examples/Stereo/stereo_euroc_detection.cpp.s
+.PHONY : Examples/Stereo/stereo_euroc_detection.cpp.s
+
 Examples/Stereo/stereo_kitti.o: Examples/Stereo/stereo_kitti.cpp.o
 
 .PHONY : Examples/Stereo/stereo_kitti.o
@@ -376,33 +403,6 @@ Examples/Stereo/stereo_kitti.cpp.s:
 	$(MAKE) -f CMakeFiles/stereo_kitti.dir/build.make CMakeFiles/stereo_kitti.dir/Examples/Stereo/stereo_kitti.cpp.s
 .PHONY : Examples/Stereo/stereo_kitti.cpp.s
 
-Examples/Stereo/stereo_kitti_detection.o: Examples/Stereo/stereo_kitti_detection.cpp.o
-
-.PHONY : Examples/Stereo/stereo_kitti_detection.o
-
-# target to build an object file
-Examples/Stereo/stereo_kitti_detection.cpp.o:
-	$(MAKE) -f CMakeFiles/stereo_kitti_detection.dir/build.make CMakeFiles/stereo_kitti_detection.dir/Examples/Stereo/stereo_kitti_detection.cpp.o
-.PHONY : Examples/Stereo/stereo_kitti_detection.cpp.o
-
-Examples/Stereo/stereo_kitti_detection.i: Examples/Stereo/stereo_kitti_detection.cpp.i
-
-.PHONY : Examples/Stereo/stereo_kitti_detection.i
-
-# target to preprocess a source file
-Examples/Stereo/stereo_kitti_detection.cpp.i:
-	$(MAKE) -f CMakeFiles/stereo_kitti_detection.dir/build.make CMakeFiles/stereo_kitti_detection.dir/Examples/Stereo/stereo_kitti_detection.cpp.i
-.PHONY : Examples/Stereo/stereo_kitti_detection.cpp.i
-
-Examples/Stereo/stereo_kitti_detection.s: Examples/Stereo/stereo_kitti_detection.cpp.s
-
-.PHONY : Examples/Stereo/stereo_kitti_detection.s
-
-# target to generate assembly for a file
-Examples/Stereo/stereo_kitti_detection.cpp.s:
-	$(MAKE) -f CMakeFiles/stereo_kitti_detection.dir/build.make CMakeFiles/stereo_kitti_detection.dir/Examples/Stereo/stereo_kitti_detection.cpp.s
-.PHONY : Examples/Stereo/stereo_kitti_detection.cpp.s
-
 src/Converter.o: src/Converter.cpp.o
 
 .PHONY : src/Converter.o
@@ -429,6 +429,33 @@ src/Converter.s: src/Converter.cpp.s
 src/Converter.cpp.s:
 	$(MAKE) -f CMakeFiles/ORB_SLAM2.dir/build.make CMakeFiles/ORB_SLAM2.dir/src/Converter.cpp.s
 .PHONY : src/Converter.cpp.s
+
+src/Detection.o: src/Detection.cpp.o
+
+.PHONY : src/Detection.o
+
+# target to build an object file
+src/Detection.cpp.o:
+	$(MAKE) -f CMakeFiles/ORB_SLAM2.dir/build.make CMakeFiles/ORB_SLAM2.dir/src/Detection.cpp.o
+.PHONY : src/Detection.cpp.o
+
+src/Detection.i: src/Detection.cpp.i
+
+.PHONY : src/Detection.i
+
+# target to preprocess a source file
+src/Detection.cpp.i:
+	$(MAKE) -f CMakeFiles/ORB_SLAM2.dir/build.make CMakeFiles/ORB_SLAM2.dir/src/Detection.cpp.i
+.PHONY : src/Detection.cpp.i
+
+src/Detection.s: src/Detection.cpp.s
+
+.PHONY : src/Detection.s
+
+# target to generate assembly for a file
+src/Detection.cpp.s:
+	$(MAKE) -f CMakeFiles/ORB_SLAM2.dir/build.make CMakeFiles/ORB_SLAM2.dir/src/Detection.cpp.s
+.PHONY : src/Detection.cpp.s
 
 src/Detector.o: src/Detector.cpp.o
 
@@ -970,6 +997,33 @@ src/Viewer.cpp.s:
 	$(MAKE) -f CMakeFiles/ORB_SLAM2.dir/build.make CMakeFiles/ORB_SLAM2.dir/src/Viewer.cpp.s
 .PHONY : src/Viewer.cpp.s
 
+src/YOLODetector.o: src/YOLODetector.cpp.o
+
+.PHONY : src/YOLODetector.o
+
+# target to build an object file
+src/YOLODetector.cpp.o:
+	$(MAKE) -f CMakeFiles/ORB_SLAM2.dir/build.make CMakeFiles/ORB_SLAM2.dir/src/YOLODetector.cpp.o
+.PHONY : src/YOLODetector.cpp.o
+
+src/YOLODetector.i: src/YOLODetector.cpp.i
+
+.PHONY : src/YOLODetector.i
+
+# target to preprocess a source file
+src/YOLODetector.cpp.i:
+	$(MAKE) -f CMakeFiles/ORB_SLAM2.dir/build.make CMakeFiles/ORB_SLAM2.dir/src/YOLODetector.cpp.i
+.PHONY : src/YOLODetector.cpp.i
+
+src/YOLODetector.s: src/YOLODetector.cpp.s
+
+.PHONY : src/YOLODetector.s
+
+# target to generate assembly for a file
+src/YOLODetector.cpp.s:
+	$(MAKE) -f CMakeFiles/ORB_SLAM2.dir/build.make CMakeFiles/ORB_SLAM2.dir/src/YOLODetector.cpp.s
+.PHONY : src/YOLODetector.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -978,14 +1032,14 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... stereo_euroc_detection"
 	@echo "... mono_euroc"
-	@echo "... mono_kitti"
-	@echo "... mono_tum"
 	@echo "... rgbd_tum"
 	@echo "... ORB_SLAM2"
 	@echo "... stereo_kitti"
 	@echo "... stereo_euroc"
-	@echo "... stereo_kitti_detection"
+	@echo "... mono_kitti"
+	@echo "... mono_tum"
 	@echo "... Examples/Monocular/mono_euroc.o"
 	@echo "... Examples/Monocular/mono_euroc.i"
 	@echo "... Examples/Monocular/mono_euroc.s"
@@ -1001,15 +1055,18 @@ help:
 	@echo "... Examples/Stereo/stereo_euroc.o"
 	@echo "... Examples/Stereo/stereo_euroc.i"
 	@echo "... Examples/Stereo/stereo_euroc.s"
+	@echo "... Examples/Stereo/stereo_euroc_detection.o"
+	@echo "... Examples/Stereo/stereo_euroc_detection.i"
+	@echo "... Examples/Stereo/stereo_euroc_detection.s"
 	@echo "... Examples/Stereo/stereo_kitti.o"
 	@echo "... Examples/Stereo/stereo_kitti.i"
 	@echo "... Examples/Stereo/stereo_kitti.s"
-	@echo "... Examples/Stereo/stereo_kitti_detection.o"
-	@echo "... Examples/Stereo/stereo_kitti_detection.i"
-	@echo "... Examples/Stereo/stereo_kitti_detection.s"
 	@echo "... src/Converter.o"
 	@echo "... src/Converter.i"
 	@echo "... src/Converter.s"
+	@echo "... src/Detection.o"
+	@echo "... src/Detection.i"
+	@echo "... src/Detection.s"
 	@echo "... src/Detector.o"
 	@echo "... src/Detector.i"
 	@echo "... src/Detector.s"
@@ -1070,6 +1127,9 @@ help:
 	@echo "... src/Viewer.o"
 	@echo "... src/Viewer.i"
 	@echo "... src/Viewer.s"
+	@echo "... src/YOLODetector.o"
+	@echo "... src/YOLODetector.i"
+	@echo "... src/YOLODetector.s"
 .PHONY : help
 
 
